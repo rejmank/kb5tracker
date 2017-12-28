@@ -24,7 +24,7 @@ export default (state = initialState, action) => {
         case 'ADD_CURRENT_TRAINING':
             return state = [...state, action.payload];
         case 'DELETE_CURRENT_TRAINING':
-            return state.filter( training => training.id !== action.payload.id );
+            return state = state.filter( training => training.id !== action.payload );
         case 'EDIT_CURRENT_TRAINING':
             return state.map(training => {
                 if (training.id === action.payload.id) {
