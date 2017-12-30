@@ -21,6 +21,8 @@
   },
   "devDependencies": {
     "@strv/eslint-config-javascript": "^7.9.0",
-    "eslint": "^4.14.0"
+    "eslint": "^4.14.0",
+    "react-app-rewire-eslint": "^0.2.3",
+    "react-app-rewired": "^1.4.0"
   }
 }
