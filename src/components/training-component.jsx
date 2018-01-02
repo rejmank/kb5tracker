@@ -1,5 +1,6 @@
-import react from 'react';
+import react from 'react'
 
-class training extends react.Component{
-    
+class training extends react.Component {
 }
+
+export default training

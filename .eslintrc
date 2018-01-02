@@ -1,3 +1,10 @@
 {
-    "extends": "react-app"
+  "extends": [
+    "@strv/javascript/environments/react/v15",
+    "@strv/javascript/environments/react/optional",
+    "@strv/javascript/coding-styles/recommended"
+  ],
+  "env": {
+    "commonjs": true
   }
+}
