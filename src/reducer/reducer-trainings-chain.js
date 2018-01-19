@@ -1,10 +1,11 @@
-
-export default (state = 2, action) => {
-  switch(action.type) {
+const trainingChain = (state = 2, action) => {
+  switch (action.type) {
     case 'CHANGE_TRAININGS_IN_ROW':
-      return state = action.payload
+      state = action.payload
+      return state
     default:
-      return state;
+      return state
   }
-
 }
+
+export default trainingChain
