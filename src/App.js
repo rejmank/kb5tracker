@@ -1,8 +1,8 @@
 import React from 'react'
 import './App.css'
-import PastTrainingsContainer from './components/loged-trainings/pastTrainingsContainer'
+import Container from './components/container-component'
 
-const App = () => <PastTrainingsContainer/>
+const App = () => <Container/>
 
 
 export default App

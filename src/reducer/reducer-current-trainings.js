@@ -1,22 +1,4 @@
-
-const initialState = [{
-  excercises: [
-    {
-      excercise: '1',
-      repetition: 6,
-      series: 5,
-      days: [1, 3, 5],
-    },
-    { excercise: '7',
-      repetition: 6,
-      series: 5 },
-  ],
-  days: [1, 3, 5],
-  id: 1,
-}]
-
-
-const trainings = (state = initialState, action) => {
+const trainings = (state = [], action) => {
   switch (action.type) {
     case 'ADD_CURRENT_TRAINING':
       state = [...state, action.payload]
@@ -31,6 +13,9 @@ const trainings = (state = initialState, action) => {
         }
         return training
       })
+    case 'SET_CURRENT_TRAININGS':
+      state = action.payload
+      return state
     default:
       return state
   }
