@@ -4,22 +4,35 @@ import styled from 'styled-components'
 
 
 const WeekContainer = styled.div`
+width: 80%;
 display: flex;
+padding-top: 10px;
+padding-bottom: 10px;
     .active {
-        color: red;
+        background-color: #cecbca;
     }
+`
+
+const Day = styled.div`
+    background-color: #fFFFF;
+    text-align: center;
+    width: 80%;
+    heigth: 20%;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
 `
 
 
 const DaysInWeek = ({ days }) => (
   <WeekContainer>
-    <div className={ getClassName('po', days)}>Po</div>
-    <div className={ getClassName('ut', days)}>Út</div>
-    <div className={ getClassName('st', days)}>St</div>
-    <div className={ getClassName('ct', days)}>Čt</div>
-    <div className={ getClassName('pa', days)}>Pá</div>
-    <div className={ getClassName('so', days)}>So</div>
-    <div className={ getClassName('ne', days)}>Ne</div>
+    <Day className={ getClassName('po', days)}>Po</Day>
+    <Day className={ getClassName('ut', days)}>Út</Day>
+    <Day className={ getClassName('st', days)}>St</Day>
+    <Day className={ getClassName('ct', days)}>Čt</Day>
+    <Day className={ getClassName('pa', days)}>Pá</Day>
+    <Day className={ getClassName('so', days)}>So</Day>
+    <Day className={ getClassName('ne', days)}>Ne</Day>
   </WeekContainer>
 )
 

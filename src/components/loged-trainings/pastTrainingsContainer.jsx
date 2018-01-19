@@ -5,7 +5,15 @@ import { bindActionCreators } from 'redux'
 import PastTraining from './training'
 import axios from 'axios'
 import { setPastTrainings, addPastTraining } from '../../actions/index'
+import styled from 'styled-components'
 
+const Container = styled.div`
+  display: grid;
+    .training{
+      grid-column-start: 2;
+      grid-column-end: 6;
+    }
+  `
 
 class PastTrainingsContainer extends React.Component {
   componentDidMount() {
@@ -20,8 +28,11 @@ class PastTrainingsContainer extends React.Component {
   }
 
   render() {
-    return this.props.trainings.map(training =>
-      <PastTraining key={training.id} training={training}/>)
+    return (
+      <Container>
+        {this.props.trainings.map(training =>
+          <PastTraining className="training" key={training.id} training={training}/>)}
+      </Container>)
   }
 }
 
