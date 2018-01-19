@@ -20,7 +20,8 @@ class PastTrainingsContainer extends React.Component {
   }
 
   render() {
-    return this.props.trainings.map(training => <PastTraining key={training.id} training={training}/>)
+    return this.props.trainings.map(training =>
+      <PastTraining key={training.id} training={training}/>)
   }
 }
 
