@@ -20,8 +20,12 @@ class CurrentTrainingsContainer extends React.Component {
   }
 
   render() {
-    return this.props.currentTrainings.map(training => (<CurrentTraining training={training}
-      key={training.id} deleteTraining={this.props.actions.deleteCurrentTraining}/>))
+    return (
+      <div>
+        <button>add new training</button>
+        {this.props.currentTrainings.map(training => (<CurrentTraining training={training}
+          key={training.id} deleteTraining={this.props.actions.deleteCurrentTraining}/>))}
+      </div>)
   }
 
   deleteTraining(id) {

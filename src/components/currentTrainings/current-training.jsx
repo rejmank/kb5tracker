@@ -29,7 +29,6 @@ const CurrentTraining = ({ training, deleteTraining }) => (
       <Excercise key={index} excerciseData={excercise}/>)}
     <DaysInWeek days = {training.days} />
     <Button onClick={() => deleteTraining(training.id)}>delete training</Button>
-    <Button>add new training</Button>
   </Container>)
 
 CurrentTraining.propTypes = {
